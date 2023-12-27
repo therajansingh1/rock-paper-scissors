@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --DarkText: hsl(229, 25%, 31%);
+  --ScoreText: hsl(229, 64%, 46%);
+  --HeaderOutline: hsl(217, 16%, 45%);
+  --backgroundRadialGradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+}
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+main {
+  height: 100vh;
+  background-image: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* score section */
+
+.heading {
+  border: 2px solid var(--HeaderOutline);
+  border-radius: 1rem;
+  width: 50vw;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.score {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 1rem;
+  text-align: center;
+}
+.score h5 {
+  text-transform: uppercase;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  color: var(--ScoreText);
+  font-weight: 600;
+}
+.score p {
+  font-size: 3rem;
+  color: var(--DarkText);
+  font-weight: 700;
+}
+
+/* Game section */
+
+.game-play {
+  width: 400px;
+  height: 350px;
+  text-align: center;
+  position: relative;
+}
+.game-play .triangle {
+  width: 50%;
+  margin-top: 100px;
+}
+.choice {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.choice img {
+  margin: 20px;
+}
+.paper-img {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  border: 15px solid hsl(230, 89%, 62%);
+}
+.scissors-img {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  border: 15px solid hsl(39, 89%, 49%);
+}
+.rock-img {
+  position: absolute;
+  bottom: 13%;
+  left: 38%;
+  border: 15px solid hsl(349, 71%, 52%);
+}
+/* pick option */
+
+.pick {
+  width: 350px;
+  height: 150px;
+  margin-top: 20px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 2rem;
+}
+.pick h2 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+.pick img{
+  margin-top: 50px;
+  
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 50%;
+}
+.user-pick img{
+  margin-right: 50px;
+}
+.house-pick img{
+  margin-left: 50px;
+}
+.hide{
+  display: none;
+}
+
+/* win section */
+.win h2{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.win button{
+  margin-top: 10px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.win button:hover{
+  color:hsl(349, 71%, 52%) ;
+}
+/* rule */
+
+.rule{
+  align-self: self-end;
+  margin-top: 100px;
+  margin-right: 50px;
+}
+#rule-img{
+  position: absolute;
+  right: 38vw;
+  top: 28%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+}
+#rule-close{
+  padding: 4px;
+  background-color: #fff;
+  border: 10px solid var(--backgroundRadialGradient);
+  position: absolute;
+  right: 38vw;
+  top: 28%;
+  cursor: pointer;
+}
+#rulebtn,#resetbtn{
+  margin-left: 5px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border-radius: 8px;
+  background-color: var(--backgroundRadialGradient);
+  color: var(--HeaderOutline);
+  border: 2px solid var(--HeaderOutline);
+  outline: 0;
+  cursor: pointer;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* media queries */
+
+@media (max-width:650px){
+  .heading {
+    width: 80vw;
+    margin: auto;
+    padding: 20px;
+  }
+ 
+  #rule-img{
+    position: absolute;
+    right: 20vw;
+    top: 28%;
+  }
+  #rule-close{
+    position: absolute;
+    right: 20vw;
+    top: 28%;
+  }
+}
+@media (max-width:375px){
+  .heading {
+    width: 80vw;
+    margin: auto;
+    padding: 20px;
+  }
+ 
+  #rule-img{
+    position: absolute;
+    right: 0vw;
+    top: 0%;
+    bottom: 0;
+    background-color: none;
+    padding:180px 25px 150px 55px;
+    border-radius: 0px;
+    object-fit: cover;
+    
+  }
+  #rule-close{
+    height: 10px;
+    position: absolute;
+    right: 45vw;
+    top:85%;
+  }
+  .score {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 1rem;
+    text-align: center;
+  }
+  .score p {
+    font-size: 2rem;
+    color: var(--DarkText);
+    font-weight: 700;
+  }
+}

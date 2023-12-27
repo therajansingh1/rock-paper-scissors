@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <main>
+    <div class="heading">
+      <img src="./images/logo.svg" alt="">
+      <div class="score">
+        <h5>score</h5>
+        <p id="winscore">00</p>
+      </div>
+    </div>
+    <div class="game-play">
+      <img class="triangle" src="./images/bg-triangle.svg" alt="">
+      <div class="choices">
+        <div id="paper" class="choice paper-img">
+          <img  src="./images/icon-paper.svg" alt="">
+        </div>
+        <div id="scissors" class="choice scissors-img">
+          <img  src="./images/icon-scissors.svg" alt="">
+        </div>
+        <div id="rock" class="choice rock-img">
+          <img  src="./images/icon-rock.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="pick hide">
+      
+    </div>
+    <div class="win hide">
+      <h2 id="msg"></h2>
+      <button id="play-again">play again</button>
+    </div>
+    <div class="rule">
+      <img id="rule-img" class="hide" src="./images/image-rules.svg" alt="">
+      <button id="rule-close" class="hide" onclick="closeRule()"><img src="./images/icon-close.svg" alt=""></button>
+      <button id="rulebtn" onclick="rule()">Rule</button>
+      <button id="resetbtn" onclick="resetGame()">reset game</button>
+    </div>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://twitter.com/therajansingh1">Rajan Singh</a>.
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>
