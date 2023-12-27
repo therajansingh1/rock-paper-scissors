@@ -159,7 +159,7 @@ main {
 .rule{
   align-self: self-end;
   margin-top: 100px;
-  margin-right: 50px;
+  margin: 0 50px 50px 0;
 }
 #rule-img{
   position: absolute;
@@ -220,7 +220,7 @@ main {
     top: 28%;
   }
 }
-@media (max-width:375px){
+@media (max-width:450px){
   .heading {
     width: 80vw;
     margin: auto;
@@ -233,7 +233,7 @@ main {
     top: 0%;
     bottom: 0;
     background-color: none;
-    padding:180px 25px 150px 55px;
+    padding:180px 65px 150px 80px;
     border-radius: 0px;
     object-fit: cover;
     
